@@ -1,5 +1,9 @@
-let title = document.getElementsByClassName('com-bg-text')
+let title = document.querySelector('.com-bg-text')
 
-console.log(title)
+let burger = document.querySelector(".burger-menu")
 
-title.innerHTML = "HELLO FROM JS"
+let button = document.querySelector('.nav-open')
+
+button.addEventListener('click',()=>{
+    burger.classList.toggle('opened')
+})
