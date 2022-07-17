@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+/* CSS RESET START*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+	text-decoration: none;
+    color: #e38321;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.color1 {color: #122542;}
+.color2 {color: #17509f;}
+.color3 {color: #e38321;}
+.color4 {color: #e6c02f;}
+.color5 {color: #f3e981;}
+
+/* CSS RESET END */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #17509f;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #122542;
+    font-size: 24px;
+    color: #e38321;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-button{
+    background-color: #17509f;
+    font-family: 'Montserrat', sans-serif;
+    color: #e38321;
+    font-size: 24px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-color: #e6c02f;
+    border-width: medium;
+}
+
+.logo{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-img{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.logo-txt{
+    font-weight: 600;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article{
+    width: 80%;
+    height: 1000px;
+}
+
+aside{
+    background-color: #f3e981;
+    align-self: stretch;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add{
+    margin: 10px;
+    width: 80%;
+    height: 30%;
+    background-color: #122542;
+    color: white;
+}
+
+.add-info{
+    margin: 10px;
+}
+
+.login-header{
+    background-color: #122542;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header-txt{
+    font-size: 32px;
+    color: #e38321;
+    font-weight: 600;
+}
+
+.subbmition-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.subbmition-panel{
+    background-color: #122542;
+    width: 450px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #e38321;
+    font-weight: 400;
+}
+
+.submit-login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.submit-password{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-txt{
+    width: 80%;
+    height: 20px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.log-reg-butons{
+    display: flex;
+    flex-direction: row;
 }

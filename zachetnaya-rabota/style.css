@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+/* CSS RESET START*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e38321;
+}
+
+.color1 {
+    color: #122542;
+}
+
+.color2 {
+    color: #17509f;
+}
+
+.color3 {
+    color: #e38321;
+}
+
+.color4 {
+    color: #e6c02f;
+}
+
+.color5 {
+    color: #f3e981;
+}
+
+/* CSS RESET END */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #17509f;
+}
+
+.navbar {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #122542;
+    font-size: 24px;
+    color: #e38321;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #17509f;
+    font-family: 'Montserrat', sans-serif;
+    color: #e38321;
+    font-size: 24px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    /*border-color: #e6c02f*/
+    ;
+}
+
+.logo {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-img {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.logo-txt {
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article {
+    width: 80%;
+    /* подключаем сетку */
+    display: grid;
+    /* ставим всё по центру */
+    place-items: center;
+    /* если что-то не помещается на своё место — скрываем то, что не поместилось */
+    overflow: hidden;
+}
+
+aside {
+    background-color: #f3e981;
+    align-self: stretch;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add {
+    margin: 10px;
+    width: 80%;
+    height: 30%;
+    background-color: #122542;
+    color: white;
+}
+
+.add-info {
+    margin: 10px;
+}
+
+.login-header {
+    background-color: #122542;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header-txt {
+    font-size: 32px;
+    color: #e38321;
+    font-weight: 600;
+}
+
+.subbmition-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.subbmition-panel {
+    background-color: #122542;
+    width: 20%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #e38321;
+    font-weight: 400;
+}
+
+.submit-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.submit-password {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-txt {
+    width: 80%;
+    height: 20px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.login-button {
+    margin-bottom: 10px;
+}
+
+/* делаем везде так, чтобы свойства width и height задавали не размеры контента, а размеры блока */
+* {
+    box-sizing: border-box;
+}
+  
+  
+/* общий блок для всех элементов */
+.deal-wheel {
+    height: 100vh;
+    margin-top: 20px;
+    /* задаём переменные блока */
+    /* размеры колеса */
+    --size: clamp(250px, 80vmin, 700px);
+    /* настройки яркости и заливки фона секторов */
+    --lg-hs: 0 3%;
+    --lg-stop: 50%;
+    --lg: linear-gradient(
+        hsl(var(--lg-hs) 0%) 0 var(--lg-stop),
+        hsl(var(--lg-hs) 20%) var(--lg-stop) 100%
+      );
+    /* добавляем позиционирование относительно других элементов */
+    position: relative;
+    /* подключаем сетку */
+    display: grid;
+    grid-gap: calc(var(--size) / 20);
+    /* выравниваем содержимое блока по центру */
+    align-items: center;
+    /* задаём имена областей внутри сетки */
+    grid-template-areas:
+      "spinner"
+      "trigger";
+    /* устанавливаем размер шрифта */
+    font-size: calc(var(--size) / 21);
+}
+
+/* всё, что относится ко внутренним элементам главного блока, будет находиться в области сетки с названием spinner */
+.deal-wheel > * {
+    grid-area: spinner;
+}
+  
+/* сам блок и кнопка будут находиться в области сетки с названием trigger и будут выровнены по центру */
+.deal-wheel .btn-spin {
+    grid-area: trigger;
+    justify-self: center;
+  }
+  
+/* сектор колеса */
+.spinner {
+    /* добавляем относительное позиционирование */
+    position: relative;
+    /* подключаем сетку */
+    display: grid;
+    /* выравниваем всё по центру */
+    align-items: center;
+    /* добавляем элемент в сетку */
+    grid-template-areas: "spinner";
+    /* устанавливаем размеры */
+    width: var(--size);
+    height: var(--size);
+    /* поворачиваем элемент  */
+    transform: rotate(calc(var(--rotate, 25) * 1deg));
+    /* рисуем круглую обводку, а всё, что не поместится, — будет скрыто за кругом */
+    border-radius: 50%;
+}
+  
+/* всё, что внутри этого блока, будет находиться в области сетки с названием spinner */
+.spinner * {
+    grid-area: spinner;
+}
+  
+/* текст на секторах */
+.prize {
+    /* включаем «гибкую» вёрстку */
+    display: flex;
+    align-items: center;
+    /* задаём отступы от краёв блока */
+    padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 20);
+    /* устанавливаем размеры */
+    width: 50%;
+    height: 50%;
+    /* устанавливаем координаты, относительно которых будем вращать текст */
+    transform-origin: center right;
+    /* поворачиваем текст */
+    transform: rotate(var(--rotate));
+    /* запрещаем пользователю выделять мышкой текст на секторах */
+    user-select: none;
+}
+  
+/* язычок */
+.ticker {
+    /* добавляем относительное позиционирование */
+    position: relative;
+    /* устанавливаем размеры */
+    left: calc(var(--size) / -15);
+    width: calc(var(--size) / 10);
+    height: calc(var(--size) / 20);
+    /* фон язычка */
+    background: var(--lg);
+    /* делаем так, чтобы язычок был выше колеса */
+    z-index: 1;
+    /* форма язычка */
+    clip-path: polygon(20% 0, 100% 50%, 20% 100%, 0% 50%);
+    /* устанавливаем точку, относительно которой будет вращаться язычок при движении колеса */
+    transform-origin: center left;
+}
+  
+/* кнопка запуска колеса */
+.btn-spin {
+    background-color: #122542;
+    padding: 0.9rem 2rem 1rem;
+    /* скругляем углы */
+    cursor: pointer;
+}
+  
+/* если кнопка нажата и неактивна */
+.btn-spin:disabled {
+    /* меняем внешний вид курсора */
+    cursor: progress;
+    /* делаем кнопку полупрозрачной */
+    opacity: 0.25;
+}
+  
+/* анимация вращения */
+.is-spinning .spinner {
+    transition: transform 8s cubic-bezier(0.1, -0.01, 0, 1);
+}
+  
+/* анимация движения язычка */
+  .is-spinning .ticker {
+            animation: tick 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+  
+  
+/* эффект, когда колесо задевает язычок при вращении */
+@keyframes tick {
+    40% {
+      /* чуть поворачиваем язычок наверх в середине анимации */
+      transform: rotate(-12deg);
+    }
+}
+  
+/* анимируем выпавший сектор */
+.prize.selected .text {
+    /* делаем текст белым */
+    color: white;
+    /* настраиваем длительность анимации */
+    animation: selected 800ms ease;
+}
+  
+/* настраиваем анимацию текста на выпавшем секторе по кадрам */
+@keyframes selected {
+    /* что происходит на 25% от начала анимации */
+    25% {
+      /* увеличиваем текст в 1,25 раза */
+      transform: scale(1.25);
+      /* добавляем тексту тень */
+      text-shadow: 1vmin 1vmin 0 hsla(0 0% 0% / 0.1);
+    }
+    40% {
+      transform: scale(0.92);
+      text-shadow: 0 0 0 hsla(0 0% 0% / 0.2);
+    }
+    60% {
+      transform: scale(1.02);
+      text-shadow: 0.5vmin 0.5vmin 0 hsla(0 0% 0% / 0.1);
+    }
+    75% {
+      transform: scale(0.98);
+    }
+    85% {
+      transform: scale(1);
+    }
+}
